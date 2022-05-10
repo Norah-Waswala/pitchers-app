@@ -1,6 +1,7 @@
+from xmlrpc.client import boolean
 from wtforms import ValidationError
 from flask_wtf import FlaskForm
-from wtforms import StringField,PasswordField,SubmitField
+from wtforms import StringField,PasswordField,SubmitField,BooleanField
 from wtforms.validators import DataRequired,Email,EqualTo
 from app.models import User
 class RegistrationForm(FlaskForm):
@@ -21,7 +22,7 @@ class RegistrationForm(FlaskForm):
 class LoginForm(FlaskForm):
     
     username = StringField('Enter your username',validators = [DataRequired()])
-    password = PasswordField('Password',validators = [DataRequired(), EqualTo('password_confirm',message = 'Passwords must match')])
-   
+    password = PasswordField('Password',validators = [DataRequired()])
+    remember = BooleanField('remember me')
     submit = SubmitField('Login')
    
