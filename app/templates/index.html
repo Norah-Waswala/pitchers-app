@@ -19,12 +19,13 @@
 						<div class="thumbnail" id="carded">
 							<h5 class="card-header">Title: {{pitch.title}}</h5>
 							<div class="card-body">
+								{{pitch.id}}
 									<p>pitch: {{pitch.post}}</p>
 									<p class="text-center"> Category: {{pitch.category}}</p>
 									<footer class="blockquote-footer text-center" > Posted by: {{pitch.user.username}}</footer>
 								<div><span class="foot" >{{pitch.comment.count()}} Comments</span> 
-									<span class="foot" > <a href="{{url_for('main.like',id = pitch.id)}}"><i class="fa fa-thumbs-up" style="font-size:18px;color: green"></i></a> {{pitch.upvote.count()}}</span>
-									
+							
+									<span class="foot"> <a href="{{url_for('main.like',id = pitch.id)}}"> <i class="fa fa-thumbs-down" style="color:red;"></i> {{pitch.upvote.count()}}</a></span></div>
 									
 									<span class="foot"> <a href="{{url_for('main.dislike',id = pitch.id)}}"> <i class="fa fa-thumbs-down" style="color:red;"></i> {{pitch.downvote.count()}}</a></span></div>
 			
@@ -45,8 +46,6 @@
 			</div>
 </div>
 
-{% block create_pitch %}
-{% include "create_pitch.html" %}
-{% endblock %}
 
-{%endblock%}
+
+{%endblock%} 
