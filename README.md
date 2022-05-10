@@ -4,13 +4,13 @@ Norah Waswala
 ## Project Description
 An application that allows users to submit their pitches(by saying something meaningful in a minute) and other users will vote on them and leave comments to give their feedback on them.
 ## User Story
-a user should be able to:
-Comment on the different pitches posted py other uses.
-See the pitches posted by other uses.
-Vote on s pitch they have viwed by giving it a upvote or a downvote.
-Register to be allowed to log in to the application
-View pitches from the different categories.
-Submit a pitch to a specific category of their choice.
+A user should be able to:
+*Comment on the different pitches posted py other uses.
+*See the pitches posted by other uses.
+*Vote on s pitch they have viwed by giving it a upvote or a downvote.
+*Register to be allowed to log in to the application
+*View pitches from the different categories.
+*Submit a pitch to a specific category of their choice.
 ## Requirements
 The application requires the following installations to operate:
 *SQL database
@@ -29,5 +29,5 @@ For more information, find me at my email (https://norah.waswala15@gmail.com)
 
 ## link to live site on heroku pages
 ## License and copyright information
-[MIT] LICENSE
+[MIT LICENSE](LICENSE)
 Copyright (C) [2022] [@ Norah-Waswala]
