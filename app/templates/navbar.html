@@ -1,5 +1,5 @@
 <nav class="mb-1 navbar navbar-expand-lg navbar-dark ">
-  <a class="navbar-brand" href="{{url_for('main.index')}}"><strong>Pich-World</strong> </a>
+  <a class="navbar-brand" href="{{url_for('main.index')}}"><strong>Pitch Point</strong> </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
   </button>
@@ -31,6 +31,7 @@
               <a  class="nav-link" href="{{url_for('auth.login')}}" style= 'margin-right:30px'><i class="fas fa-sign-in-alt"></i>&nbsp; <strong>Log In</strong></a>
           </li>
           <li class="nav-item">
+            <a style= 'margin-right:30px' class="nav-link" href="{{url_for('main.new_pitch')}}"><i class="fas fa-user-plus"></i></i>&nbsp; <strong>create pitch</strong></a>
                   <a style= 'margin-right:30px' class="nav-link" href="{{url_for('auth.register')}}"><i class="fas fa-user-plus"></i></i>&nbsp; <strong>Sign Up</strong></a>
               </li>
           {%endif%}
