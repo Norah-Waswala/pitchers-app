@@ -16,7 +16,7 @@ def index():
 
 
 
-@main.route('/create_new', methods = ['POST','GET'])
+@main.route('/create_pitch', methods = ['POST','GET'])
 @login_required
 def new_pitch():
     form = PitchForm()
@@ -29,7 +29,7 @@ def new_pitch():
         new_pitch_object.save_p()
         return redirect(url_for('main.index'))
         
-    return render_template('create_pitch.html', form = form)
+    return render_template('new_pitch.html', form = form)
 
 @main.route('/comment/<int:pitch_id>', methods = ['POST','GET'])
 @login_required
@@ -44,7 +44,7 @@ def comment(pitch_id):
         new_comment = Comment(comment = comment,user_id = user_id,pitch_id = pitch_id)
         new_comment.save_c()
         return redirect(url_for('.comment', pitch_id = pitch_id))
-    return render_template('comment.html', form =form, pitch = pitch,all_comments=all_comments)
+    return render_template('/templates/comment.html', form =form, pitch = pitch,all_comments=all_comments)
 
 
 @main.route('/user/<name>')
