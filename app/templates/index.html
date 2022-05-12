@@ -1,19 +1,11 @@
-
 {% extends "base.html" %}
-
 {% block content %}
-<div id="head" class="bg">
-  <div class="overlay">
-    <br><br><br>
-    <h1>PITCH POINT</h1>
-	<p>One minute to either make it or break it.Showcase you 60 second thought and let users vote on it!!</p>
+<div id="head" >
+  <h1>PITCH POINT</h1>
+	<p> One minute to either make it or break it.Showcase you 60 second thought and let users vote on it!!</p>
   </div>
 </div>
-<h2>Post Your Pitch</h2>
-
-  
-  
-  <div class="container-fluid">
+<div class="container-fluid">
 		<div class="row">
 				{% if pitches %}
 					{% for pitch in pitches %}
@@ -24,13 +16,16 @@
 									<p>pitch: {{pitch.post}}</p>
 									<p class="text-center"> Category: {{pitch.category}}</p>
 									<footer class="blockquote-footer text-center" > Posted by: {{pitch.user.username}}</footer>
-								<div><span class="foot" >{{pitch.comment.count()}} Comments</span> 
+								<div class="foot">
+									<div><span class="foot" ><i class="fa fa-comments-o" style="font-size:24px;color:red"></i>{{pitch.comment.count()}} </span> 
 							
-									<span class="foot"> <a href="{{url_for('main.like',id = pitch.id)}}"> <i class="fa fa-thumbs-down" style="color:red;"></i> {{pitch.upvote.count()}}</a></span></div>
+									<span class="foot"> <a href="{{url_for('main.like',id = pitch.id)}}"> <i class="fa fa-thumbs-up" style="font-size:24px;color:rgb(123, 255, 0);"></i> {{pitch.upvote.count()}}</a></span></div>
 									
-									<span class="foot"> <a href="{{url_for('main.dislike',id = pitch.id)}}"> <i class="fa fa-thumbs-down" style="color:red;"></i> {{pitch.downvote.count()}}</a></span></div>
-			
-								<a href="{{url_for('main.comment',pitch_id = pitch.id)}}" class="btn btn-info btn-sm"> Comment</a>
+									<span class="foot"> <a href="{{url_for('main.dislike',id = pitch.id)}}"> <i class="fa fa-thumbs-down" style="font-size:24px;color:red;"></i></a>{{pitch.downvote.count()}}</span></div>
+			                    </div>
+								<div class="comment">
+								   <a href="{{url_for('main.comment',pitch_id = pitch.id)}}" class="btn btn-info btn-sm"> Comment</a>
+							    </div>
 							</div>
 						</div>
 					</div>
@@ -40,7 +35,7 @@
 				<div class="card w-90 mb-3">
 					<div class="card-body">
 				
-						<p class="card-title">PItch Has 0 posts</p>
+						<p class="card-title">Pitch Has 0 posts</p>
 					</div>
 				</div>
 				{% endif %}

@@ -43,9 +43,8 @@ def comment(pitch_id):
         pitch_id = pitch_id
         user_id = current_user
         new_comment = Comment(comment = comment,user_id = user_id,pitch_id = pitch_id)
-        # new_comment.save()
-        db.session.add(new_comment)
-        db.session.commit()
+ 
+
         title = f'{pitch.title} comment'
         return redirect(url_for('.comment', pitch_id = pitch_id))
     return render_template('comment.html', form =form, pitch = pitch,all_comments=all_comments)
@@ -75,16 +74,16 @@ def updateprofile(name):
     return render_template('profile/update.html',form =form)
 
 
-@main.route('/user/<name>/update/pic',methods= ['POST'])
-@login_required
-def update_pic(name):
-    user = User.query.filter_by(username = name).first()
-    if 'photo' in request.files:
-        # filename = photos.save(request.files['photo'])
-        # path = f'photos/{filename}'
-        # user.profile_pic_path = path
-        db.session.commit()
-    return redirect(url_for('main.profile',name=name))
+# @main.route('/user/<name>/update/pic',methods= ['POST'])
+# @login_required
+# def update_pic(name):
+#     user = User.query.filter_by(username = name).first()
+#     if 'photo' in request.files:
+#         # filename = photos.save(request.files['photo'])
+#         # path = f'photos/{filename}'
+#         # user.profile_pic_path = path
+#         db.session.commit()
+#     return redirect(url_for('main.profile',name=name))
 
 @main.route('/like/<int:id>',methods = ['POST','GET'])
 @login_required
