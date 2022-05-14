@@ -17,8 +17,8 @@ class Config:
     MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
 
 class ProdConfig(Config):
-    SQLALCHEMY_DATABASE_URI = "postgresql://gpcqvpewhjteaz:a77f52443aceea65a52b3efac95875e8dece983bdd9565ab64b7df15ba7bc50a@ec2-52-86-56-90.compute-1.amazonaws.com:5432/d3p6iphvpopfl2"
-
+    # SQLALCHEMY_DATABASE_URI = "postgresql://gpcqvpewhjteaz:a77f52443aceea65a52b3efac95875e8dece983bdd9565ab64b7df15ba7bc50a@ec2-52-86-56-90.compute-1.amazonaws.com:5432/d3p6iphvpopfl2"
+        pass
 class DevConfig(Config):
     DEBUG = True
 
