@@ -2,24 +2,76 @@
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Josefin Sans', sans-serif;
 }
 h1 {
-    color: rgb(255, 145, 0);
+    font-size: 180%;
+    
+    color:rgba(187, 204, 33, 0.89);
+    font-weight: bolder;
+}
+#head p{
+    font-style: italic;
 }
 #head{
    margin: 0%;
     text-align: center;
     height: 30vh;
+    /* background-color: rgba(255, 255, 255, 0.548); */
+    border-radius: 10px;
+    padding: 10px;
 }
 
 #carded h5 {
-   color: rgb(255, 145, 0);
-   text-align: center;
+   color:black;
+   /* text-align: center; */
+   font-weight: 300;
+   font-size: larger;
 
 }
+#carded p {
+    color:black;
+   
+    font-weight: 300;
+    font-size: larger;
+ 
+ }
+#carded {
+    /* background-color: rgba(255, 250, 240, 0.486); */
+    background-image: url(../static/final.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.7;
+    
+}
+.btn{
+    background-color:rgba(187, 204, 33, 0.979);
+    color: black;
+}
+.foot{
+    color:black;
+   
+    font-weight: 300;
+    font-size: larger;  
+}
+
+.blockquote-footer span{
+    color:black;
+    font-weight: bold;
+   
+    font-size: larger;    
+}
+.blockquote-footer {
+    color:#0e4d8b;
+    font-weight: bold;
+  
+    font-size: larger;
+    font-weight: bold;    
+}
+
 body{
-    background-color: aquamarine;
+  background-image:url(../static/pitch.jpg);
+  opacity: 02;
 }
 .foot{
     display: inline-flex;
@@ -32,3 +84,21 @@ body{
 .profile p{
     color: rgb(255, 145, 0);
 }
+#carded .card-header{
+    color: #0e4d8b;
+    font-weight: bold;
+}
+#carded p{
+    color: #0e4d8b;
+    font-weight: bold;
+    
+}
+
+/* #carded .card-header span{
+    color: rgb(15, 15, 15);
+} */
+#carded span{
+    color: rgb(15, 15, 15);
+}
+
+
