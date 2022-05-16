@@ -28,6 +28,7 @@ python 3.8.8
 For more information, find me at my email (https://norah.waswala15@gmail.com)
 
 ## link to live site on heroku pages
+https://pitch-2020.herokuapp.com/
 ## License and copyright information
 [MIT LICENSE](LICENSE)
 Copyright (C) [2022] [@ Norah-Waswala]
