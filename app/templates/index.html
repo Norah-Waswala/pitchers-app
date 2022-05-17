@@ -1,11 +1,14 @@
-{% extends "base.html" %}
+
+{% extends 'base.html'%}
+
+
 {% block content %}
-<div id="head" >
-  <h1>PITCH POINT</h1>
+<div id="head">
+	<h1>PITCH POINT</h1>
 	<p> It is one minute to either make it or break it.
 		<br> Showcase you 60 second thought and let users vote on it!!</p>
-  </div>
 </div>
+
 <div class="container-fluid">
 		<div class="row">
 				{% if pitches %}
@@ -42,7 +45,4 @@
 				{% endif %}
 			</div>
 </div>
-
-				
-
-{%endblock%} 
+{%endblock%}

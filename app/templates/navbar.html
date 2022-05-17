@@ -6,10 +6,7 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="{{url_for('main.index')}}"> Pitches</a>
-        <a class="nav-link" href="{{url_for('main.index')}}">Categories</a>
-      </li>
+   
       {% if current_user.is_authenticated %}
       <li class="nav-item">
         <a class="nav-link" href="{{url_for('main.new_pitch')}}">New Pitch</a>
@@ -35,6 +32,10 @@
             class="fas fa-sign-in-alt"></i>&nbsp; <strong>Log In</strong></a>
       </li>
       <li class="nav-item">
+        <a style='margin-right:30px' class="nav-link" href="{{url_for('main.index')}}"><i
+          class="fas fa-user-plus"></i></i>&nbsp; <strong>Home</strong></a>
+        <a style='margin-right:30px' class="nav-link" href="{{url_for('main.categories')}}"><i
+          class="fas fa-user-plus"></i></i>&nbsp; <strong>Categories</strong></a>
         <a style='margin-right:30px' class="nav-link" href="{{url_for('main.new_pitch')}}"><i
             class="fas fa-user-plus"></i></i>&nbsp; <strong>create pitch</strong></a>
         <a style='margin-right:30px' class="nav-link" href="{{url_for('auth.register')}}"><i

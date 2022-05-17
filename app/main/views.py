@@ -8,11 +8,24 @@ from .. import db
 
 @main.route('/')
 def index():
-    pitches = Pitch.query.all()
+   
+    pitches = Pitch.query.order_by(Pitch.posted.desc()).all() 
     job = Pitch.query.filter_by(category = 'Job').all() 
+    life = Pitch.query.filter_by(category = 'Life').all()
     event = Pitch.query.filter_by(category = 'Events').all()
     advertisement = Pitch.query.filter_by(category = 'Advertisement').all()
-    return render_template('index.html',pitches=pitches,job = job,event = event,advertisement= advertisement)
+    return render_template('index.html',pitches=pitches,job = job,life=life,event = event,advertisement= advertisement)
+
+@main.route('/categories', methods = ['POST','GET'])
+def categories():
+   
+    pitches = Pitch.query.order_by(Pitch.posted.desc()).all() 
+    job = Pitch.query.filter_by(category = 'Job').all() 
+    life = Pitch.query.filter_by(category = 'Life').all()
+    event = Pitch.query.filter_by(category = 'Events').all()
+    advertisement = Pitch.query.filter_by(category = 'Advertisement').all()
+        
+    return render_template('categories.html',pitches=pitches,job = job,life=life,event = event,advertisement= advertisement)
 
 
 
@@ -74,16 +87,7 @@ def updateprofile(name):
     return render_template('profile/update.html',form =form)
 
 
-# @main.route('/user/<name>/update/pic',methods= ['POST'])
-# @login_required
-# def update_pic(name):
-#     user = User.query.filter_by(username = name).first()
-#     if 'photo' in request.files:
-#         # filename = photos.save(request.files['photo'])
-#         # path = f'photos/{filename}'
-#         # user.profile_pic_path = path
-#         db.session.commit()
-#     return redirect(url_for('main.profile',name=name))
+
 
 @main.route('/like/<int:id>',methods = ['POST','GET'])
 @login_required
