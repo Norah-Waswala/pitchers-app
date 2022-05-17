@@ -1,5 +1,5 @@
 *{
-    margin: 0%;
+    margin: auto;
     padding: 0%;
     box-sizing: border-box;
     font-family: 'Josefin Sans', sans-serif;
@@ -70,6 +70,7 @@ h1 {
 }
 
 body{
+    background-image: url(../static/pitch.jpg);
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
