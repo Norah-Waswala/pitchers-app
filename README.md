@@ -4,7 +4,7 @@ Norah Waswala
 ## Project Description
 An application that allows users to submit their pitches(by saying something meaningful in a minute) and other users will vote on them and leave comments to give their feedback on them.
 # Demoscreen
-![Alt text](/relative/path/to/screen/Screenshot from 2022-05-17 19-53-02.png?raw=true "Optional Title")
+![screen](/app/static/screen/screen.png)
 ## User Story
 A user should be able to:
 * Comment on the different pitches posted py other uses.
